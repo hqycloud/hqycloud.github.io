@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* 使项目顶部对齐 */
+    justify-content: center; /* 水平居中对齐 */
+}
+
+.left-image {
+    width: 420px; /* 设置图片宽度 */
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: 20%;
+    margin-bottom: 10px; /* 设置图片的外边距，确保不贴紧 */
+    transition: transform 0.5s ease; /* 添加过渡效果 */
+    /* 设置图片左对齐 */
+    margin-right: auto;
+}
+
+.left-image:hover {
+    transform: rotate(360deg); /* 鼠标悬停时旋转一周 */
+}
+
+.content {
+    margin-left: 30px; /* 设置内容区的左边距 */
+    padding-top: 90px;
+    padding-bottom: 20px; /* 设置内容区的内边距 */
+}
+.content1 {
+    margin-left: 20px; /* 设置内容区的左边距 */
+    padding-top: 90px;
+
+    flex: 1; /* 内容区占据剩余空间 */
+}
+.contact {
+	padding-top: 15px;
+    margin-left: 20%; /* 设置内容区的左边距 */
+	margin-right: 20%;
+    padding-bottom: 20px; /* 设置内容区的内边距 */
+}
+.contact1 {
+    margin-left: 30px; /* 设置内容区的左边距 */
+	padding-top: 20px;
+    padding-bottom: 20px; /* 设置内容区的内边距 */
+}
+
+p {
+    text-align: center;
+}
+txt1 {
+    text-align: center;
+	font-size: 10pt;
+}
+
+txt2 {
+	font-size: 6pt;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 在小屏幕上垂直堆叠项目 */
+        align-items: center; /* 水平居中对齐项目 */
+    }
+
+    .left-image {
+        max-width: 80%; /* 图片最大宽度调整为80% */
+        margin: 10px auto; /* 图片居中并减少外边距 */
+    }
+
+    .content, .content1 {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .contact, .contact1 {
+        margin: 10px auto;
+        padding: 10px;
+        max-width: 90%; /* 调整最大宽度以适应小屏幕 */
+    }
+}
